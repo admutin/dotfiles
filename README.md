@@ -1,6 +1,8 @@
 initial:
 ```bash
-
+mkdir repos  
+nix-shell -p github-cli git 
+gh auth login
 ```
 
 
