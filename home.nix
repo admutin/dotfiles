@@ -65,7 +65,7 @@
   # };
 
   programs.bottom = {
-    enable = true;
+    enable = false;
     settings = {
       flags = {
         color="default-light";

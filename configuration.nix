@@ -114,6 +114,7 @@
           ms-python.python
           gencer.html-slim-scss-css-class-completion
           ms-vscode-remote.remote-ssh
+          prettier.prettier-eslint
         ];
       })
       discord-canary
