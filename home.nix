@@ -23,7 +23,7 @@
 
   programs.git = {
     enable = true;
-    userName = "Tobias Schür";
+    userName = "Admutin";
     userEmail = "admutin@gmail.com";
     delta.enable = true;
     ignores = [".direnv"];
@@ -65,7 +65,7 @@
   # };
 
   programs.bottom = {
-    enable = false;
+    enable = true;
     settings = {
       flags = {
         color="default-light";
@@ -85,6 +85,8 @@
     tealdeer
     tree
     tokei
+    github-cli
+    git
     # electrum
     # handbrake
   ];
@@ -92,11 +94,11 @@
   dconf.settings = {
     "org/gnome/shell" = {
       favorite-apps = [
-        "org.gnome.Nautilus.desktop"
+        "google-chrome.desktop"
         "code.desktop"
         "org.telegram.desktop.desktop"
+        "org.gnome.Nautilus.desktop"
         "com.gexperts.Tilix.desktop"
-        "google-chrome.desktop"
       ];
       disable-extension-version-validation = true;
       disable-user-extensions = false;
