@@ -114,7 +114,7 @@
           ms-python.python
           gencer.html-slim-scss-css-class-completion
           ms-vscode-remote.remote-ssh
-          prettier.prettier-eslint
+          # prettier.prettier-eslint
         ];
       })
       discord-canary
@@ -144,7 +144,6 @@
       unzip
       virt-manager
       dotnet-sdk #todo: versions
-      #todo: 
     ] ++ [ cool-retro-term jellyfin-media-player ]
     ++ (with inputs.nixpkgs-wayland; [ wl-clipboard xdg-desktop-portal-wlr ]);
   # Some programs need SUID wrappers, can be configured further or are
@@ -164,4 +163,6 @@
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;
+
+  virtualisation.docker.enable = true;
 }
