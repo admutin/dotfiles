@@ -16,5 +16,9 @@ no space on efi:
 
 
 
-webdavs
+webdav:  
 `sudo chmod 600 /etc/davfs2/secrets`
+
+app name:  
+`alt + F2`
+`lg` -> `windows` upper right
