@@ -144,6 +144,7 @@
       unzip
       virt-manager
       dotnet-sdk #todo: versions
+      steamtinkerlaunch
     ] ++ [ cool-retro-term jellyfin-media-player ]
     ++ (with inputs.nixpkgs-wayland; [ wl-clipboard xdg-desktop-portal-wlr ]);
   # Some programs need SUID wrappers, can be configured further or are
@@ -153,6 +154,29 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
+  nixpkgs.overlays = [
+    (self: super: {
+      steam-run = (super.steam.override {
+        extraLibraries = pkgs: with pkgs;
+          [
+            libxkbcommon
+            mesa
+            wayland
+            (sndio.overrideAttrs (old: {
+              postFixup = old.postFixup + ''
+                ln -s $out/lib/libsndio.so $out/lib/libsndio.so.6.1
+              '';
+            }))
+          ];
+      }).run;
+    })
+  ];
 
   # List services that you want to enable:
   # Enable the OpenSSH daemon.
