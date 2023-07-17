@@ -87,6 +87,7 @@
     tokei
     github-cli
     git
+    spotify
     # electrum
     # handbrake
   ];
