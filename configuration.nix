@@ -77,19 +77,19 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tobi = import ./tobi.nix;
-  # fileSystems."/home/tobi/nextcloud" = {
-  #   fsType = "davfs";
-  #   device = "https://nextcloud.admutin.de/remote.php/dav/files/tobi/";
-  #   options = [ "nofail" "auto" ];
-  # };
+  fileSystems."/home/tobi/nextcloud" = {
+    fsType = "davfs";
+    device = "https://nextcloud.admutin.de/remote.php/dav/files/tobi/";
+    options = [ "nofail" "auto" ];
+  };
   # fileSystems."/home/tobi/olat" = {
   #   fsType = "davfs";
   #   device = "https://olat.vcrp.de/webdav";
   #   options = [ "nofail" "auto" ];
   # };
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "tobi";
+  # services.xserver.displayManager.autoLogin.enable = true;
+  # services.xserver.displayManager.autoLogin.user = "tobi";
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 

@@ -13,3 +13,8 @@ after change:
 
 no space on efi:
 `sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +2 `
+
+
+
+webdavs
+`sudo chmod 600 /etc/davfs2/secrets`
