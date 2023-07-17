@@ -19,10 +19,13 @@ sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +2
 ```
 
 
-
-
-
-
-
 other stuff  
 * steam: https://gist.github.com/jakehamilton/632edeb9d170a2aedc9984a0363523d3
+
+
+webdav:  
+`sudo chmod 600 /etc/davfs2/secrets`
+
+app name:  
+`alt + F2`
+`lg` -> `windows` upper right

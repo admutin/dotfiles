@@ -94,11 +94,11 @@
   dconf.settings = {
     "org/gnome/shell" = {
       favorite-apps = [
-        "google-chrome.desktop"
-        "code.desktop"
+        "firefox.desktop"
+        "codium.desktop"
         "org.telegram.desktop.desktop"
         "org.gnome.Nautilus.desktop"
-        "com.gexperts.Tilix.desktop"
+        "org.gnome.Console.desktop"
       ];
       disable-extension-version-validation = true;
       disable-user-extensions = false;
