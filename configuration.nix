@@ -108,14 +108,21 @@
       htop
       gotop
       (vscode-with-extensions.override {
+        vscode = vscodium;
         vscodeExtensions = with vscode-extensions; [
           bbenoist.nix
           brettm12345.nixfmt-vscode
           ms-python.python
           gencer.html-slim-scss-css-class-completion
           ms-vscode-remote.remote-ssh
-          # prettier.prettier-eslint
-        ];
+        ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+      name = "vs-code-prettier-eslint";
+      publisher = "rvest";
+      version = "5.0.4";
+      sha256 = "sha256-aLEAuFQQTxyFSfr7dXaYpm11UyBuDwBNa0SBCMJAVRI=";
+    }
+    ];
       })
       discord-canary
       tdesktop
