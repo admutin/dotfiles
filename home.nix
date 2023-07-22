@@ -72,7 +72,7 @@
       };
     };
   };
-
+  
   programs.gallery-dl.enable = true;
 
   home.packages = with pkgs; [
@@ -88,6 +88,7 @@
     github-cli
     git
     spotify
+    tailscale
     # electrum
     # handbrake
   ];
