@@ -97,7 +97,7 @@
     "org/gnome/shell" = {
       favorite-apps = [
         "firefox.desktop"
-        "codium.desktop"
+        "code.desktop"
         "org.telegram.desktop.desktop"
         "org.gnome.Nautilus.desktop"
         "org.gnome.Console.desktop"
