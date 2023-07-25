@@ -18,6 +18,7 @@
     plugins = [ ];
     shellAliases = {
       "cd" = "z";
+      "cd.." = "cd ..";
     };
   };
 
@@ -89,6 +90,7 @@
     git
     spotify
     tailscale
+    teamspeak_client
     # electrum
     # handbrake
   ];
