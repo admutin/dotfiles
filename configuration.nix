@@ -114,7 +114,6 @@
         vscodeExtensions = with vscode-extensions; [
           bbenoist.nix
           brettm12345.nixfmt-vscode
-          ms-python.python
           gencer.html-slim-scss-css-class-completion
           ms-vscode-remote.remote-ssh
           # xaver.clang-format
@@ -131,7 +130,6 @@
       discord-canary
       tdesktop
       tilix
-      python3
       git
       obsidian
       wireguard-tools
@@ -200,4 +198,6 @@
   system.autoUpgrade.allowReboot = true;
 
   virtualisation.docker.enable = true;
+
+  security.polkit.enable = true;
 }
